@@ -28,20 +28,24 @@ show tables;
 //Para ver os atributos que estão dentro da tabela
 describe <nome da tabela>;
 Exemplo: describe Aluno;
+-------------------------------------------------------------------------
 
 //Se for necessário trocar a chave primaria da tabela
 //Comando para retirar o atributo de chave primaria de uma linha
 alter table Aluno
 drop primary key
 
-//Adicionar linha nova a tabela
+--------------------------------------------------------------------------
+//Adicionar um novo campo a tabela
 alter table Editora
 add codigo_editora int auto_increment primary key not null;
 
-//Mudar atributos de uma linha da table - Os atributos são escolhidos,
+---------------------------------------------------------------------------
+//Mudar atributos de um campo da table - Os atributos são escolhidos,
 //neste caso eu o coloquei como primary key para complementar a opção de trocar de chave
 ex: alter table Aluno change nome nome varchar(50) not null primary key;
 
+----------------------------------------------------------------------------
 //Para adicionar uma Foreign Key a uma tabela
 //Primeiro deve-se adicionar um novo campo a tabela
 alter table Livro
@@ -50,7 +54,7 @@ add codigo_editora int;
 //Estão deve-se referenciar a chave
 alter table Livro
 add FOREIGN KEY (codigo_editora) REFERENCES editora (codigo_editora);
-
+----------------------------------------------------------------------------
 
 
 
