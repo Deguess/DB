@@ -1,0 +1,23 @@
+//Entrar no usuário root
+mysql -u root -p
+
+//Criar a Data Base
+create database Biblioteca;
+
+//Encontrar o Database e entrar no mesmo
+show databases;
+use Biblioteca;
+
+//Criação da tabela Aluno
+//   'n' -> é o tamanho que será definido no varchar - Ex: varchar(50)
+create table Aluno(
+matricula int primary key not null auto_increment,
+nome varchar(n) not null,
+fone varchar(16) not null,
+endereco varchar(100) not null,
+sexo char(1) not null,
+cpf varchar(11) not null,
+email varchar(70) null
+);
+// Fim da criação da estrutura da tabela
+//Repetir o processo em cada tabela que quiser criar
