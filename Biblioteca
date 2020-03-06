@@ -21,3 +21,12 @@ email varchar(70) null
 );
 // Fim da criação da estrutura da tabela
 //Repetir o processo em cada tabela que quiser criar
+
+//Para ver as tabelas que foram criadas
+show tables;
+
+//Para ver os atributos que estão dentro da tabela
+describe <nome da tabela>;
+Exemplo: describe Aluno;
+
+
