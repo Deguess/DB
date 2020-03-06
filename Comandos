@@ -2,3 +2,15 @@ mysql -u root -p
 show
 use
 descibre
+
+
+//Mudar atributos de uma linha da table
+ex: alter table editora change nome nome varchar(50) not null;
+
+//Adicionar linha nova a tabela
+alter table Editora
+add codigo_editora int auto_increment primary key not null;
+
+//Tirar atributo de chave primaria de uma linha da tabela
+alter table Editora
+drop primary key
