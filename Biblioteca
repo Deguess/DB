@@ -42,5 +42,15 @@ add codigo_editora int auto_increment primary key not null;
 //neste caso eu o coloquei como primary key para complementar a opção de trocar de chave
 ex: alter table Aluno change nome nome varchar(50) not null primary key;
 
+//Para adicionar uma Foreign Key a uma tabela
+//Primeiro deve-se adicionar um novo campo a tabela
+alter table Livro
+add codigo_editora int;
+
+//Estão deve-se referenciar a chave
+alter table Livro
+add FOREIGN KEY (codigo_editora) REFERENCES editora (codigo_editora);
+
+
 
 
