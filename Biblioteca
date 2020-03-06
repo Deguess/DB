@@ -28,8 +28,8 @@ show tables;
 //Para ver os atributos que estão dentro da tabela
 describe <nome da tabela>;
 Exemplo: describe Aluno;
--------------------------------------------------------------------------
 
+-------Outros comando para adicionar/alterar campos na tabela-------------
 //Se for necessário trocar a chave primaria da tabela
 //Comando para retirar o atributo de chave primaria de uma linha
 alter table Aluno
