@@ -1,0 +1,12 @@
+//Colocando as informações dentro de uma tabela
+Insert into genero values
+  (null,'Informática','INF'),
+  (null,'Administração','ADM'),
+  (null,'Direito','DIR'),
+  (null,'Matemática','MAT'),
+  (null,'Esportes','ESP');
+  
+  //codigo - nome - sigla
+  //null - O auto_increment está completando o campo automaticamente
+  //se não houver o auto-incremente, coloque uma informação no lugar ou deixe nulo
+  
