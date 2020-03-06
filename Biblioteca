@@ -29,4 +29,18 @@ show tables;
 describe <nome da tabela>;
 Exemplo: describe Aluno;
 
+//Se for necessário trocar a chave primaria da tabela
+//Comando para retirar o atributo de chave primaria de uma linha
+alter table Aluno
+drop primary key
+
+//Adicionar linha nova a tabela
+alter table Editora
+add codigo_editora int auto_increment primary key not null;
+
+//Mudar atributos de uma linha da table - Os atributos são escolhidos,
+//neste caso eu o coloquei como primary key para complementar a opção de trocar de chave
+ex: alter table Aluno change nome nome varchar(50) not null primary key;
+
+
 
