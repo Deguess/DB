@@ -13,5 +13,12 @@ Insert into genero values
   -----------------------
   //Para ver o que foi colocado dentro das tabelas
   select * from <tabela>
-  
-  
+   ----------------------
+   //Para mudar algo na tabela
+   update <tabela>
+   set <campo>='informação'
+   where <campo>=posição;
+   
+Ex: update livros 
+    set ano='2009.02.02'
+    where codigo_livro=1;
