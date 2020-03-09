@@ -22,3 +22,7 @@ Insert into genero values
 Ex: update livros 
     set ano='2009.02.02'
     where codigo_livro=1;
+
+-----------------------------
+select * from <tabela>
+where <campo> = 'valor';
