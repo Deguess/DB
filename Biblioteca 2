@@ -1,0 +1,110 @@
+
+create database biblioteca2;
+
+use biblioteca2;
+
+
+
+create table aluno(
+     matricula int primary key auto_increment not null,
+     nome varchar(50) not null,
+     fone varchar(16) not null,
+     endereco varchar(100) not null,
+     sexo char(1) not null,
+     cpf varchar(11) not null,
+     email varchar(100)
+     );
+
+create table editora( 
+	editora int not null primary key auto_increment,
+	nome varchar(50)
+);
+
+
+create table genero(
+     codigo_genero int auto_increment primary key not null,
+     nome varchar(50) not null
+     );
+
+ create table autor(
+     codigo_autor int primary key not null auto_increment,
+     nome_completo varchar(100) not null,
+     nome varchar(30) not null,
+     sobrenome varchar(70) not null
+     );
+
+
+
+ALTER TABLE editora CHANGE editora codigo_editora INT(5) 
+	NOT NULL   AUTO_INCREMENT; 
+
+
+ALTER TABLE genero ADD sigla Varchar(3) NULL; 
+
+
+
+
+create table livro(
+	codigo_livro int not null auto_increment primary key,
+	nome varchar(50)  not null,
+	edicao varchar(10) not null,
+	ano date not null,
+	codigo_genero int,
+	codigo_autor int,
+	editora int,
+	FOREIGN KEY (codigo_genero) REFERENCES genero (codigo_genero),
+	FOREIGN KEY (codigo_autor)  REFERENCES autor  (codigo_autor),
+	FOREIGN KEY (editora) REFERENCES editora (codigo_editora)
+	
+
+);
+
+
+
+create table empresta(
+	matricula int,
+	codigo_livro int,
+	data_retirada date,
+	data_devolucao date,
+	FOREIGN KEY (matricula) REFERENCES aluno (matricula),
+	FOREIGN KEY (codigo_livro) REFERENCES livro (codigo_livro),
+	PRIMARY KEY (matricula, codigo_livro) 
+
+);
+
+
+
+
+
+
+INSERT INTO genero VALUES 
+	(null, 'Informática', 'INF'), 
+	(null, 'Administração', 'ADM'), 
+	(null, 'Direito', 'DIR'), 
+	(null, 'Matemática', 'MAT'), 
+	(null, 'Esportes', 'ESP'); 
+
+
+INSERT INTO autor VALUES 
+	(null, 'Carlos Alberto Heuser', 'Carlos Alberto', 'HEUSER'),
+
+	(null, 'Idalberto Chiavenato', ‘Idalberto', 'CHIAVENATO'), 
+
+ 	(null, ‘Paul Deitel', ‘Deitel', ‘DEITEL');
+
+
+
+INSERT INTO editora VALUES
+	(null, 'Pearson'), 
+	(null, 'Editora Campus'),
+	(null, ‘Novatec’); 
+
+
+
+INSERT INTO livro VALUES 
+	(null, 'Projeto de Banco de Dados', 1, '2009-2-2',  1, 1, 1), 
+	(null, ‘Java', 8, '2010-04-6',  3, 1, 1), 
+	(null, ‘Teoria Geral da Administração', 3, '2007-10-7', 2, 2, 2); 
+
+
+
