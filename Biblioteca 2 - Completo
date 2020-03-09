@@ -99,12 +99,18 @@ INSERT INTO editora VALUES
 	(null, 'Editora Campus'),
 	(null, ‘Novatec’); 
 
-
-
 INSERT INTO livro VALUES 
 	(null, 'Projeto de Banco de Dados', 1, '2009-2-2',  1, 1, 1), 
 	(null, ‘Java', 8, '2010-04-6',  3, 1, 1), 
 	(null, ‘Teoria Geral da Administração', 3, '2007-10-7', 2, 2, 2); 
+	
+INSERT INTO aluno VALUES
+	(1, 'Maria', 5432175310, 'Caxias do Sul', 'F', 123456789, 'maria@senacrs.com.br'),
+	(2, 'João', 5136365119, 'Porto Alegre', 'M', 987654321, 'joão@senacrs.com.br');
+	
+INSERT INTO empresta VALUES
+	(1, 1, '2020-03-09', null),
+	(2, 2, '2020-03-09', null);
 
 
 
