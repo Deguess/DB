@@ -10,3 +10,8 @@ Insert into genero values
   //null - O auto_increment está completando o campo automaticamente
   //se não houver o auto-incremente, coloque uma informação no lugar ou deixe nulo
   
+  -----------------------
+  //Para ver o que foi colocado dentro das tabelas
+  select * from <tabela>
+  
+  
