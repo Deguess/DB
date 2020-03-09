@@ -26,3 +26,9 @@ Ex: update livros
 -----------------------------
 select * from <tabela>
 where <campo> = 'valor';
+
+-----------------------------
+
+Select l.nome, g.sigla
+from livro.l, genero.g
+where l.codigo_genero = g.codigo_genero
